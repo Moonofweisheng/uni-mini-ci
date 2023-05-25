@@ -1,12 +1,4 @@
-/*
- * @Author: weisheng
- * @Date: 2023-05-24 11:54:09
- * @LastEditTime: 2023-05-24 20:46:09
- * @LastEditors: weisheng
- * @Description:
- * @FilePath: \uni-mini-ci\src\index.ts
- * 记得注释
- */
+#!/usr/bin/env node
 
 export * from './interfaces'
 import { wxupload } from './WeappCI'
