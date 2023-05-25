@@ -1,6 +1,6 @@
 {
   "name": "uni-mini-ci",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "一个小程序端构建后支持 CI（持续集成）的插件，支持上传微信、企业微信、钉钉、支付宝平台的小程序。只需简单配置，即可轻松上传多个平台的小程序",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

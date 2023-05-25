@@ -1,6 +1,13 @@
 # 更新日志 
 
 
+### [0.0.3](https://gitee.com/fant-mini/uni-mini-ci/compare/v0.0.2...v0.0.3) (2023-05-25)
+
+
+### ✨ Features | 新功能
+
+* ✨ 支持默认取package.json的version和desc，增加文档 ([ad08932](https://gitee.com/fant-mini/uni-mini-ci/commit/ad089329ac2e836abf18c74620b0f0bd37cb12c0))
+
 ### [0.0.2](https://gitee.com/fant-mini/uni-mini-ci/compare/v0.0.1...v0.0.2) (2023-05-25)
 
 
