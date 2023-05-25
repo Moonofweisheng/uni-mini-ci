@@ -4,7 +4,7 @@
  * @LastEditTime: 2023-05-25 14:55:18
  * @LastEditors: weisheng
  * @Description:
- * @FilePath: \uni-mini-ci\src\WeappCI.ts
+ * @FilePath: \uni-mini-ci\src\WeixinCI.ts
  * 记得注释
  */
 import * as ci from 'miniprogram-ci'
@@ -13,25 +13,25 @@ import * as fs from 'fs-extra'
 import * as path from 'path'
 
 export async function wxupload(options: CIOptions) {
-  const privateKeyPath = path.resolve(process.cwd(), options.weapp.privateKeyPath)
+  const privateKeyPath = path.resolve(process.cwd(), options.weixin.privateKeyPath)
   if (!fs.existsSync(privateKeyPath)) {
-    console.error(`"weapp.privateKeyPath"选项配置的路径不存在,本次上传终止:${privateKeyPath}`)
+    console.error(`"weixin.privateKeyPath"选项配置的路径不存在,本次上传终止:${privateKeyPath}`)
     process.exit(1)
   }
   const project = new ci.Project({
     type: 'miniProgram' as ProjectType,
-    projectPath: options.weapp!.projectPath,
-    appid: options.weapp!.appid,
+    projectPath: options.weixin!.projectPath,
+    appid: options.weixin!.appid,
     privateKeyPath: privateKeyPath,
-    ignores: options.weapp!.ignores
+    ignores: options.weixin!.ignores
   })
   const uploadResult = await ci.upload({
     version: options.version,
     project: project,
     desc: options.desc,
     onProgressUpdate: undefined,
-    robot: options.weapp!.robot,
-    setting: options.weapp!.setting
+    robot: options.weixin!.robot,
+    setting: options.weixin!.setting
   })
 
   if (uploadResult.subPackageInfo) {
