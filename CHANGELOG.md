@@ -1,6 +1,13 @@
 # 更新日志 
 
 
+### [0.0.4](https://gitee.com/fant-mini/uni-mini-ci/compare/v0.0.3...v0.0.4) (2023-05-25)
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 🐛 移除一些打印信息 ([5d596c3](https://gitee.com/fant-mini/uni-mini-ci/commit/5d596c3e1a2c2c7927cc9d58ab3f434207413721))
+
 ### [0.0.3](https://gitee.com/fant-mini/uni-mini-ci/compare/v0.0.2...v0.0.3) (2023-05-25)
 
 
