@@ -1,0 +1,23 @@
+{
+  "weapp": {
+    "appid": "微信小程序appid",
+    "privateKeyPath": "密钥文件相对项目根目录的相对路径，例如 key/private.appid.key",
+    "projectPath":"dist/build/mp-weixin"
+
+  },
+  "alipay": {
+    "appid": "支付宝小程序appid",
+    "toolId": "工具id",
+    "privateKeyPath": "密钥文件相对项目根目录的相对路径，例如 key/pkcs8-private-pem",
+    "projectPath":"dist/build/mp-alipay"
+  },
+  "dd": {
+    "appid": "钉钉小程序appid,即钉钉开放平台后台应用管理的 MiniAppId 选项",
+    "token": "令牌，从钉钉后台获取",
+    "projectPath":"dist/build/mp-alipay"
+  },
+  // 版本号
+  "version": "1.0.0",
+  // 版本发布描述
+  "desc": "版本描述"
+}
