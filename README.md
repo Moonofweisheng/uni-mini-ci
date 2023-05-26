@@ -1,7 +1,7 @@
 <!--
  * @Author: weisheng
  * @Date: 2023-05-24 11:51:28
- * @LastEditTime: 2023-05-26 10:48:56
+ * @LastEditTime: 2023-05-26 10:56:50
  * @LastEditors: weisheng
  * @Description: 
  * @FilePath: \uni-mini-ci\README.md
@@ -95,7 +95,7 @@ yarn add uni-mini-ci -D
 ```
 
 ## 注意
-> 支付宝和钉钉小程序不支持上传的版本号大于现有版本号，我们在测试环境调试可能会频繁的修改代码并上传，所以每次上传操作都指定版本号并不现实。针对这一问题，我们提供了`autoincrement`字段用于配置版本号是否自增，配置此字段为`true`时，`uni-mini-ci`会忽略配置文件中的`version`字段，并且上传版本号会在当前版本的小版本号上加一。而生产环境则不建议配置`autoincrement`字段，特殊情况可灵活使用。
+> 支付宝和钉钉小程序不支持上传的版本号小于或等于现有版本号，我们在测试环境调试可能会频繁的修改代码并上传，所以每次上传操作都指定版本号并不现实。针对这一问题，我们提供了`autoincrement`字段用于配置版本号是否自增，配置此字段为`true`时，`uni-mini-ci`会忽略配置文件中的`version`字段，并且上传版本号会在当前版本的小版本号上加一。而生产环境则不建议配置`autoincrement`字段，特殊情况可灵活使用。
 
 ## API
 
