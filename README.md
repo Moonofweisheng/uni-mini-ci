@@ -1,12 +1,3 @@
-<!--
- * @Author: weisheng
- * @Date: 2023-05-24 11:51:28
- * @LastEditTime: 2023-05-26 10:56:50
- * @LastEditors: weisheng
- * @Description: 
- * @FilePath: \uni-mini-ci\README.md
- * 记得注释
--->
 # uni-mini-ci
 
 #### 介绍
