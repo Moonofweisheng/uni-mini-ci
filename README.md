@@ -1,12 +1,53 @@
+<!--
+ * @Author: weisheng
+ * @Date: 2023-05-24 11:51:28
+ * @LastEditTime: 2023-05-26 18:30:14
+ * @LastEditors: weisheng
+ * @Description: 
+ * @FilePath: \uni-mini-ci\README.md
+ * 记得注释
+-->
 # uni-mini-ci
 
 #### 介绍
 `uni-mini-ci`是一个小程序端构建后支持 CI（持续集成）的插件，支持上传微信、企业微信、钉钉、支付宝平台的小程序。只需简单配置，即可轻松上传多个平台的小程序。
 
 ## 安装
+
+
+### 全局安装  
+
+```sh
+
+# 使用 npm
+npm i uni-mini-ci -g
+
+或者
+
+# 使用 yarn
+yarn global add uni-mini-ci
+
 ```
+
+
+### 局部安装
+```sh
+
+# 使用 npm
+npm i uni-mini-ci --save-dev
+
+或者
+
+# 使用 yarn
 yarn add uni-mini-ci -D
+
 ```
+
+## 特性
+- 支持微信、支付宝、钉钉小程序的上传
+- 支持微信、支付宝、钉钉小程序指定版本号
+- 支持设置支付宝、钉钉小程序版本号自增
+- 其他小程序平台增加中...
 
 
 ## 配置
