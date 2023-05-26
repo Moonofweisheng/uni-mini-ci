@@ -1,6 +1,14 @@
 # 更新日志 
 
 
+### [0.0.7](https://gitee.com/fant-mini/uni-mini-ci/compare/v0.0.6...v0.0.7) (2023-05-26)
+
+
+### ✏️ Documentation | 文档
+
+* ✏️  移除README的注释 ([83589fc](https://gitee.com/fant-mini/uni-mini-ci/commit/83589fc60ca7876118d613fa96578f6afb8e4bdd))
+* ✏️  增加全局安装的文档 ([41993de](https://gitee.com/fant-mini/uni-mini-ci/commit/41993de558c66c0516873e5f7ad1f4f7430cb747))
+
 ### [0.0.6](https://gitee.com/fant-mini/uni-mini-ci/compare/v0.0.5...v0.0.6) (2023-05-26)
 
 
