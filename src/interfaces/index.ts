@@ -78,6 +78,8 @@ export interface AlipayConfig {
   privateKey: string
   /** 上传的终端, 默认alipay */
   clientType?: AlipayClientType
+  /** 是否版本号自增，配置后忽略 version 字段 */
+  autoincrement?: boolean
 }
 /**钉钉小程序配置 */
 export interface DingtalkConfig {
@@ -89,6 +91,8 @@ export interface DingtalkConfig {
   token: string
   /** 钉钉应用类型， 默认为:'dingtalk-biz' (企业内部应用) */
   projectType?: DingtalkProjectType
+  /** 是否版本号自增，配置后忽略 version 字段 */
+  autoincrement?: boolean
 }
 
 /**钉钉小程序类型 */

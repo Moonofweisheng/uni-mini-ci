@@ -1,10 +1,10 @@
 /*
  * @Author: weisheng
  * @Date: 2023-05-24 14:25:27
- * @LastEditTime: 2023-05-25 14:55:18
+ * @LastEditTime: 2023-05-26 10:12:49
  * @LastEditors: weisheng
  * @Description:
- * @FilePath: \uni-mini-ci\src\WeixinCI.ts
+ * @FilePath: \uni-mini-ci\src\WexinCI.ts
  * 记得注释
  */
 import * as ci from 'miniprogram-ci'
@@ -38,6 +38,6 @@ export async function wxupload(options: CIOptions) {
     const allPackageInfo = uploadResult.subPackageInfo.find((item) => item.name === '__FULL__')
     const mainPackageInfo = uploadResult.subPackageInfo.find((item) => item.name === '__APP__')
     const extInfo = `本次上传${allPackageInfo!.size / 1024}kb ${mainPackageInfo ? ',其中主包' + mainPackageInfo.size + 'kb' : ''}`
-    console.log(`上传成功 ${new Date().toLocaleString()} ${extInfo}\n`)
+    console.log(`版本 ${options.version} 上传成功 ${new Date().toLocaleString()} ${extInfo}\n`)
   }
 }

@@ -1,7 +1,7 @@
 /*
  * @Author: weisheng
  * @Date: 2023-05-24 14:25:27
- * @LastEditTime: 2023-05-25 14:55:58
+ * @LastEditTime: 2023-05-26 10:35:03
  * @LastEditors: weisheng
  * @Description:
  * @FilePath: \uni-mini-ci\src\AlipayCI.ts
@@ -25,7 +25,7 @@ export async function aliupload(options: CIOptions) {
       privateKey = fs.readFileSync(privateKeyPath, 'utf-8')
     }
   }
-  // 方式 1. 注入默认授权信息
+
   useDefaults({
     config: {
       defaults: {
@@ -51,7 +51,7 @@ export async function aliupload(options: CIOptions) {
     const result = await minidev.upload({
       project: options.alipay!.projectPath,
       appId,
-      version: options.version,
+      version: options.alipay!.autoincrement ? '' : options.version,
       clientType,
       experience: true
     })

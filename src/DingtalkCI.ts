@@ -1,7 +1,7 @@
 /*
  * @Author: weisheng
  * @Date: 2023-05-24 14:25:27
- * @LastEditTime: 2023-05-25 14:10:45
+ * @LastEditTime: 2023-05-26 10:35:33
  * @LastEditors: weisheng
  * @Description:
  * @FilePath: \uni-mini-ci\src\DingtalkCI.ts
@@ -24,7 +24,7 @@ export async function ddupload(options: CIOptions) {
     const result = await opensdk.miniUpload({
       project: options.dd!.projectPath,
       miniAppId: options.dd!.appid,
-      packageVersion: options.version,
+      packageVersion: options.dd!.autoincrement ? '' : options.version,
       onProgressUpdate: (info: any) => {
         const { data = {} as any, status } = info
         const logId = path.basename(data.logUrl || '')
@@ -48,6 +48,6 @@ export async function ddupload(options: CIOptions) {
     })
     console.log(`版本 ${result.packageVersion} 上传成功 ${new Date().toLocaleString()}`)
   } catch (error: any) {
-    console.error(`体验版上传失败 ${new Date().toLocaleString()} \n${error.message}`)
+    console.error(`上传失败 ${new Date().toLocaleString()} \n${error.message}`)
   }
 }

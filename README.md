@@ -1,7 +1,7 @@
 <!--
  * @Author: weisheng
  * @Date: 2023-05-24 11:51:28
- * @LastEditTime: 2023-05-25 22:57:43
+ * @LastEditTime: 2023-05-26 10:48:56
  * @LastEditors: weisheng
  * @Description: 
  * @FilePath: \uni-mini-ci\README.md
@@ -37,12 +37,14 @@ yarn add uni-mini-ci -D
     "appid": "支付宝小程序appid",
     "toolId": "支付宝开放平台工具ID",
     "privateKey": "私钥文本内容",
-    "projectPath": "支付宝小程序产物目录，例如 dist/build/mp-alipay"
+    "projectPath": "支付宝小程序产物目录，例如 dist/build/mp-alipay",
+    "autoincrement": true
   },
   "dd": {
     "appid": "钉钉小程序appid,钉钉开发者后台的 MiniAppId 选项",
     "token": "钉钉开发者后台的 API Token",
-    "projectPath": "钉钉小程序产物目录，例如 dist/build/mp-alipay"
+    "projectPath": "钉钉小程序产物目录，例如 dist/build/mp-alipay",
+    "autoincrement": true
   },
   "version": "0.0.1",
   "desc": "版本描述"
@@ -66,11 +68,34 @@ yarn add uni-mini-ci -D
 }
 ```
 目前`uni-mini-ci`支持一个选项`--platform`，目前支持的平台为：
-- `weixin` 上传到微信/企业微信
-- `alipay` 上传到支付宝小程序
-- `dd` 上传到钉钉小程序
+- `weixin` 微信/企业微信
+- `alipay` 支付宝小程序
+- `dd` 钉钉小程序
+
+## 上传小程序
+配置完成后，可以在终端中执行命令进行上传操作：
+- 执行`yarn upload:weixin` 命令上传到微信小程序
+- 执行`yarn upload:alipay` 命令上传到支付宝小程序
+- 执行`yarn upload:dd` 命令上传到钉钉小程序
 
 
+我们也可以将上传命令与打包命令组合起来使用，例如：
+
+```json
+{
+  "scripts": {
+    // 打包并上传到微信小程序
+    "upload:mp-weixin": "uni build -p mp-weixin && minici --platform weixin",
+    // 打包并上传到支付宝小程序
+    "upload:mp-alipay": "uni build -p mp-alipay && minici --platform alipay",
+    // 打包并上传到钉钉小程序
+    "upload:mp-dingtalk": "uni build -p mp-dingtalk && minici --platform dd"
+  }
+}
+```
+
+## 注意
+> 支付宝和钉钉小程序不支持上传的版本号大于现有版本号，我们在测试环境调试可能会频繁的修改代码并上传，所以每次上传操作都指定版本号并不现实。针对这一问题，我们提供了`autoincrement`字段用于配置版本号是否自增，配置此字段为`true`时，`uni-mini-ci`会忽略配置文件中的`version`字段，并且上传版本号会在当前版本的小版本号上加一。而生产环境则不建议配置`autoincrement`字段，特殊情况可灵活使用。
 
 ## API
 
@@ -121,6 +146,7 @@ yarn add uni-mini-ci -D
 | projectPath         | string   | 支付宝小程序产物目录，例如 dist/build/mp-alipay（必填）                          |
 | privateKeyPath      | string | 密钥文件相对项目根目录的相对路径, 私钥可通过[支付宝开放平台开发助手](https://opendocs.alipay.com/common/02kipl)生成 |
 | privateKey          | string | 私钥文本内容, 生成方式同上(privateKeyPath 和 privateKey 之间必须要填写其中一个)                |
+| autoincrement          | boolean | 版本号是否自增（支付宝小程序上传版本号必须大于现有版本号，建议测试环境开启版本号自增）                |
 | clientType          | string | 上传的终端,终端类型见下表（选填，默认值 alipay）                                                                    |
 
 ```
@@ -160,13 +186,13 @@ health:  阿里医院
 | appid               | string | 钉钉小程序appid,钉钉开发者后台的 MiniAppId 选项（必填） |
 | token               | string | 令牌，从钉钉后台获取 （必填）                                        |
 | projectPath         | string   | 钉钉小程序产物目录，例如 dist/build/mp-alipay（必填）                           |
-
+| autoincrement          | boolean | 版本号是否自增（钉钉小程序上传版本号必须大于现有版本号，建议测试环境开启版本号自增）                |
 
 官方 CI 文档[点这里](https://github.com/open-dingtalk/dingtalk-design-cli)
 
 
 
-### 完整 ts 接口描述
+### 模型定义
 
 ```ts
 /**微信小程序类型 */
@@ -249,6 +275,8 @@ export interface AlipayConfig {
   privateKey: string
   /** 上传的终端, 默认alipay */
   clientType?: AlipayClientType
+  /** 是否版本号自增，配置后忽略 version 字段 */
+  autoincrement?: boolean
 }
 /**钉钉小程序配置 */
 export interface DingtalkConfig {
@@ -260,6 +288,8 @@ export interface DingtalkConfig {
   token: string
   /** 钉钉应用类型， 默认为:'dingtalk-biz' (企业内部应用) */
   projectType?: DingtalkProjectType
+  /** 是否版本号自增，配置后忽略 version 字段 */
+  autoincrement?: boolean
 }
 
 /**钉钉小程序类型 */
@@ -287,5 +317,6 @@ export interface CIOptions {
   /** 钉钉小程序配置 */
   dd?: DingtalkConfig
 }
+
 
 ```
