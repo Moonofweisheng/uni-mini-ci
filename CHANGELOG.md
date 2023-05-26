@@ -1,6 +1,13 @@
 # 更新日志 
 
 
+### [0.0.5](https://gitee.com/fant-mini/uni-mini-ci/compare/v0.0.4...v0.0.5) (2023-05-26)
+
+
+### ✨ Features | 新功能
+
+* ✨ 支持钉钉和支付宝小程序配置版本号为自增方式 ([8b61a5f](https://gitee.com/fant-mini/uni-mini-ci/commit/8b61a5fb1e9393fba1b8c634f44f5743e0a162b0))
+
 ### [0.0.4](https://gitee.com/fant-mini/uni-mini-ci/compare/v0.0.3...v0.0.4) (2023-05-25)
 
 
