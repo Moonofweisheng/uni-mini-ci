@@ -1,6 +1,13 @@
 # 更新日志 
 
 
+### [0.0.6](https://gitee.com/fant-mini/uni-mini-ci/compare/v0.0.5...v0.0.6) (2023-05-26)
+
+
+### ✏️ Documentation | 文档
+
+* ✏️  调整README中关于版本号自增的描述 ([39772b0](https://gitee.com/fant-mini/uni-mini-ci/commit/39772b0e7652fb076c5c3ea741da349e26467cfd))
+
 ### [0.0.5](https://gitee.com/fant-mini/uni-mini-ci/compare/v0.0.4...v0.0.5) (2023-05-26)
 
 
