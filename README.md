@@ -1,7 +1,7 @@
 <!--
  * @Author: weisheng
  * @Date: 2023-05-24 11:51:28
- * @LastEditTime: 2023-05-26 18:30:14
+ * @LastEditTime: 2023-05-30 15:22:30
  * @LastEditors: weisheng
  * @Description: 
  * @FilePath: \uni-mini-ci\README.md
@@ -137,7 +137,7 @@ yarn add uni-mini-ci -D
 | :---------- | :----- | :---------------------------------------------------------------------------------- |
 | weixin       | Object | （企业）微信小程序 CI 配置                                                          |
 | alipay      | Object | 支付宝小程序配置                                                                    |
-| dd          | Object | 钉钉小程序配置（3.6.0 版本开始支持）                                                |
+| dd          | Object | 钉钉小程序配置                                               |
 | version     | string | 上传版本号，不传时默认读取 package.json 下的 taroConfig 下的 version 字段           |
 | desc        | string | 上传时的描述信息，不传时默认读取 package.json 下的 taroConfig 下的 desc 字段        |
 
