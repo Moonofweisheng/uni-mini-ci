@@ -1,6 +1,8 @@
 # 更新日志 
 
 
+### [0.0.8-1](https://gitee.com/fant-mini/uni-mini-ci/compare/v0.0.8-0...v0.0.8-1) (2023-06-09)
+
 ### [0.0.8-0](https://gitee.com/fant-mini/uni-mini-ci/compare/v0.0.7...v0.0.8-0) (2023-06-09)
 
 
