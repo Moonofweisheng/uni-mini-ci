@@ -37,9 +37,11 @@ if (params['--platform']) {
         wxupload(resp)
           .then((resp) => {
             console.log(resp.errorMsg)
+            process.exit(0)
           })
           .catch((error) => {
             console.log(error.errorMsg)
+            process.exit(1)
           })
         break
       case 'alipay':
@@ -47,9 +49,11 @@ if (params['--platform']) {
         aliupload(resp)
           .then((resp) => {
             console.log(resp.errorMsg)
+            process.exit(0)
           })
           .catch((error) => {
             console.log(error.errorMsg)
+            process.exit(1)
           })
         break
       case 'dd':
@@ -57,9 +61,11 @@ if (params['--platform']) {
         ddupload(resp)
           .then((resp: any) => {
             console.log(resp.errorMsg)
+            process.exit(0)
           })
           .catch((error) => {
             console.log(error.errorMsg)
+            process.exit(1)
           })
         break
       default:
