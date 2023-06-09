@@ -1,3 +1,6 @@
+/** 小程序上传平台 */
+export type Platform = 'dd' | 'weixin' | 'alipay'
+
 /**微信小程序类型 */
 export type ProjectType = 'miniProgram' | 'miniGame' | 'miniProgramPlugin' | 'miniGamePlugin'
 
@@ -119,4 +122,22 @@ export interface CIOptions {
   alipay?: AlipayConfig
   /** 钉钉小程序配置 */
   dd?: DingtalkConfig
+  /** 上传成功的回调 */
+  success?: (res: UploadRes) => void
+  /** 上传失败的回调 */
+  fail?: (res: UploadRes) => void
+}
+
+/**
+ * 上传结果回调参数
+ */
+export interface UploadRes {
+  /** 发布版本号 */
+  version?: string
+  /** 小程序appid */
+  appId?: string
+  /** 错误/成功信息 */
+  errorMsg?: string
+  /** 发布平台 */
+  platform?: Platform
 }
