@@ -1,6 +1,18 @@
 # 更新日志 
 
 
+### [0.0.8-0](https://gitee.com/fant-mini/uni-mini-ci/compare/v0.0.7...v0.0.8-0) (2023-06-09)
+
+
+### ✏️ Documentation | 文档
+
+* ✏️  调整 README ([86541af](https://gitee.com/fant-mini/uni-mini-ci/commit/86541af256083a746be677688cd656e66815c222))
+
+
+### ✨ Features | 新功能
+
+* ✨ 支持hbuilderx插件 ([fd2e1d9](https://gitee.com/fant-mini/uni-mini-ci/commit/fd2e1d985171139cfa0628e9bedad6ea08e99004))
+
 ### [0.0.7](https://gitee.com/fant-mini/uni-mini-ci/compare/v0.0.6...v0.0.7) (2023-05-26)
 
 
