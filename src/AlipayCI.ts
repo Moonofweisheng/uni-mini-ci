@@ -57,6 +57,7 @@ export async function aliupload(options: CIOptions) {
     })
     console.log(`上传成功 ${new Date().toLocaleString()} ${result.version}\n`)
   } catch (error) {
-    console.error(`体验版上传失败 ${new Date().toLocaleString()} \n${error}`)
+    console.error(`上传失败 ${new Date().toLocaleString()} \n${error}`)
+    process.exit(1)
   }
 }

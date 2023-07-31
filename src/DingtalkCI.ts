@@ -1,7 +1,7 @@
 /*
  * @Author: weisheng
  * @Date: 2023-05-24 14:25:27
- * @LastEditTime: 2023-05-26 10:35:33
+ * @LastEditTime: 2023-07-31 11:14:36
  * @LastEditors: weisheng
  * @Description:
  * @FilePath: \uni-mini-ci\src\DingtalkCI.ts
@@ -43,11 +43,13 @@ export async function ddupload(options: CIOptions) {
         } else if (status === 'failed') {
           console.log('构建失败', logId)
           console.error(log)
+          process.exit(1)
         }
       }
     })
     console.log(`版本 ${result.packageVersion} 上传成功 ${new Date().toLocaleString()}`)
   } catch (error: any) {
     console.error(`上传失败 ${new Date().toLocaleString()} \n${error.message}`)
+    process.exit(1)
   }
 }

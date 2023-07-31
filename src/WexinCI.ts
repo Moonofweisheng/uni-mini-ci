@@ -25,19 +25,24 @@ export async function wxupload(options: CIOptions) {
     privateKeyPath: privateKeyPath,
     ignores: options.weixin!.ignores
   })
-  const uploadResult = await ci.upload({
-    version: options.version,
-    project: project,
-    desc: options.desc,
-    onProgressUpdate: undefined,
-    robot: options.weixin!.robot,
-    setting: options.weixin!.setting
-  })
+  try {
+    const uploadResult = await ci.upload({
+      version: options.version,
+      project: project,
+      desc: options.desc,
+      onProgressUpdate: undefined,
+      robot: options.weixin!.robot,
+      setting: options.weixin!.setting
+    })
 
-  if (uploadResult.subPackageInfo) {
-    const allPackageInfo = uploadResult.subPackageInfo.find((item) => item.name === '__FULL__')
-    const mainPackageInfo = uploadResult.subPackageInfo.find((item) => item.name === '__APP__')
-    const extInfo = `本次上传${allPackageInfo!.size / 1024}kb ${mainPackageInfo ? ',其中主包' + mainPackageInfo.size + 'kb' : ''}`
-    console.log(`版本 ${options.version} 上传成功 ${new Date().toLocaleString()} ${extInfo}\n`)
+    if (uploadResult.subPackageInfo) {
+      const allPackageInfo = uploadResult.subPackageInfo.find((item) => item.name === '__FULL__')
+      const mainPackageInfo = uploadResult.subPackageInfo.find((item) => item.name === '__APP__')
+      const extInfo = `本次上传${allPackageInfo!.size / 1024}kb ${mainPackageInfo ? ',其中主包' + mainPackageInfo.size + 'kb' : ''}`
+      console.log(`版本 ${options.version} 上传成功 ${new Date().toLocaleString()} ${extInfo}\n`)
+    }
+  } catch (error) {
+    console.error(`上传失败 ${new Date().toLocaleString()} \n${error}`)
+    process.exit(1)
   }
 }
