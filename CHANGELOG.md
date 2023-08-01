@@ -1,6 +1,13 @@
 # 更新日志 
 
 
+### [0.0.9](https://gitee.com/fant-mini/uni-mini-ci/compare/v0.0.8...v0.0.9) (2023-08-01)
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 🐛 修复支付宝平台自增参数无效的问题 ([18f8e9e](https://gitee.com/fant-mini/uni-mini-ci/commit/18f8e9e100709cb8eb0bdaa6c7bbb89793e05508))
+
 ### [0.0.8](https://gitee.com/fant-mini/uni-mini-ci/compare/v0.0.7...v0.0.8) (2023-07-31)
 
 
