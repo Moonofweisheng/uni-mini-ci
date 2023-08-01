@@ -44,7 +44,7 @@ export async function aliupload(options: CIOptions) {
       appId,
       clientType
     })
-    if (compareVersion(options.version, lasterVersion) <= 0) {
+    if (compareVersion(options.version, lasterVersion) <= 0 && !options.alipay!.autoincrement) {
       console.warn(`上传版本号 "${options.version}" 必须大于最新上传版本 "${lasterVersion}"`)
       process.exit(1)
     }
