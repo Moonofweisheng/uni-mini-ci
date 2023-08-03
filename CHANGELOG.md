@@ -1,6 +1,13 @@
 # 更新日志 
 
 
+### [0.0.10](https://gitee.com/fant-mini/uni-mini-ci/compare/v0.0.9...v0.0.10) (2023-08-03)
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 🐛 修复读取配置文件错误时没有结束当前进程的问题 ([8dcf220](https://gitee.com/fant-mini/uni-mini-ci/commit/8dcf22042f2b6a6d680157629c37db9a85721f56))
+
 ### [0.0.9](https://gitee.com/fant-mini/uni-mini-ci/compare/v0.0.8...v0.0.9) (2023-08-01)
 
 
