@@ -138,8 +138,8 @@ yarn add uni-mini-ci -D
 | weixin       | Object | （企业）微信小程序 CI 配置                                                          |
 | alipay      | Object | 支付宝小程序配置                                                                    |
 | dd          | Object | 钉钉小程序配置                                               |
-| version     | string | 上传版本号，不传时默认读取 package.json 下的 taroConfig 下的 version 字段           |
-| desc        | string | 上传时的描述信息，不传时默认读取 package.json 下的 taroConfig 下的 desc 字段        |
+| version     | string | 上传版本号，不传时默认读取 package.json 的 version 字段           |
+| desc        | string | 上传时的描述信息        |
 
 ### （企业）微信小程序 CI 配置
 
