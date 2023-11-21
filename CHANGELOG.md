@@ -1,6 +1,13 @@
 # 更新日志 
 
 
+### [0.0.11](https://github.com/Moonofweisheng/uni-mini-ci/compare/v0.0.10...v0.0.11) (2023-11-21)
+
+
+### ✏️ Documentation | 文档
+
+* ✏️  优化文档 ([1e5f17f](https://github.com/Moonofweisheng/uni-mini-ci/commit/1e5f17f1d1535875e8bd9f37c610c361027000d0))
+
 ### [0.0.10](https://gitee.com/fant-mini/uni-mini-ci/compare/v0.0.9...v0.0.10) (2023-08-03)
 
 
